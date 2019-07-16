@@ -1,0 +1,17 @@
+fj22-apostila/
+# Created by https://www.gitignore.io/api/maven
+# Edit at https://www.gitignore.io/?templates=maven
+
+### Maven ###
+fj22-ingressos/target/
+fj22-ingressos/pom.xml.tag
+fj22-ingressos/pom.xml.releaseBackup
+fj22-ingressos/pom.xml.versionsBackup
+fj22-ingressos/pom.xml.next
+fj22-ingressos/release.properties
+fj22-ingressos/dependency-reduced-pom.xml
+fj22-ingressos/buildNumber.properties
+fj22-ingressos/.mvn/timing.properties
+fj22-ingressos/.mvn/wrapper/maven-wrapper.jar
+
+# End of https://www.gitignore.io/api/maven
