@@ -4,6 +4,7 @@ fj22-apostila/
 
 ### Maven ###
 fj22-ingressos/target/
+fj22-ingressos/bin/
 fj22-ingressos/pom.xml.tag
 fj22-ingressos/pom.xml.releaseBackup
 fj22-ingressos/pom.xml.versionsBackup
