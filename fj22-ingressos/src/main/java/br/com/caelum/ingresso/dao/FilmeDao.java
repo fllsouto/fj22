@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
 import java.util.List;
 
 /**
@@ -26,7 +29,11 @@ public class FilmeDao {
     }
 
     public List<Filme> findAll() {
-        return manager.createQuery("select f from Filme f", Filme.class).getResultList();
+    	
+    	Query createQuery = manager.createQuery("select f from Filme f");
+    	
+        TypedQuery<Filme> query = manager.createQuery("select f from Filme f", Filme.class);
+        return query.getResultList();
     }
 
     public void delete(Integer id) {

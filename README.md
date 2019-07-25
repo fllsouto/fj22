@@ -6,9 +6,13 @@
 - [Git - external links](https://git-scm.com/doc/ext)
 
 
-### Artigos
+### Artigos (Ler depois)
 
 - [A successful git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Não posso descobrir nem instanciar tipos genericos! Porque ?](https://blog.caelum.com.br/nao-posso-descobrir-nem-instanciar-tipos-genericos-porque/)
+- [Spring form tutorial](https://www.baeldung.com/spring-mvc-form-tutorial)
+- [Três técnicas de ciclo de vida do Beans no Spring](https://imasters.com.br/back-end/tres-tecnicas-de-ciclo-de-vida-dos-beans-no-spring)
+- [What is a Spring Bean?](https://www.baeldung.com/spring-bean)
 
 #### Exemplo de grafo de commits
 
@@ -67,3 +71,28 @@ git log --all --oneline --graph
 * 08c69bb (origin/master) Adicionando arquivos do projeto do FJ22
 
 ```
+
+#### Anotações JPA e outros conceitos
+- [@Entity](https://www.oracle.com/technetwork/middleware/ias/entity-annotations-090770.html)
+- [Why does Hibernate require no argument constructor?](https://stackoverflow.com/questions/2935826/why-does-hibernate-require-no-argument-constructor/29433238#29433238)
+- [Como usar a anotação Generated Value](https://www.devmedia.com.br/jpa-como-usar-a-anotacao-generatedvalue/38592)
+- [Conheça o Spring Transactional Annotation](https://www.devmedia.com.br/conheca-o-spring-transactional-annotations/32472)
+- [Consultas fortemente tipadas com JPA](https://blog.caelum.com.br/consultas-fortemente-tipadas-com-jpa/)
+- [JPQL - Using TypedQuery](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/jpql-typed-query.html)
+- [Spring Databinder Examples](https://www.logicbig.com/how-to/code-snippets/jcode-spring-framework-databinder.html)
+- [What is unitName in @PersistenceContext?](https://coderanch.com/t/481448/certification/unitName-PersistenceContext)
+- [@Autowired vs @PersistenceContext for EntityManager bean](https://stackoverflow.com/questions/31335211/autowired-vs-persistencecontext-for-entitymanager-bean)
+- [Injection Of Entitymanager](https://tomee.apache.org/examples-trunk/injection-of-entitymanager/README.html)
+- [Entendendo o Java PersistenceContext Extended e Transient](https://www.devmedia.com.br/entendendo-o-java-persistencecontext-extended-e-transient/30493)
+
+
+#### Startup de um projeto novo
+
+- [Spring MVC Framework Tutorial Simplest Hello World Example with UI (JSP) Page](https://crunchify.com/simplest-spring-mvc-hello-world-example-tutorial-spring-model-view-controller-tips/)
+- [Configurando um projeto java com spring e maven](http://www.ciceroednilson.com.br/configurando-um-projeto-java-com-spring-mvc-e-maven/)
+- [How to create a web project using maven in eclipse](https://dzone.com/articles/how-to-create-a-web-project-using-maven-in-eclipse-1)
+- [Creating a Spring MVC project using Maven and Eclipse in one minute](https://www.codejava.net/frameworks/spring/creating-a-spring-mvc-project-using-maven-and-eclipse-in-one-minute)
+
+Importante sobre startup de um novo projeto: 
+
+> One thing to note here is the name of servlet in <servlet-name> tag in web.xml. Once the DispatcherServlet is initialized, it will looks for a file name [servlet-name]-servlet.xml  in WEB-INF folder of web application. In this example, the framework will look for file called crunchify-servlet.xml.
