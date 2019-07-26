@@ -13,7 +13,7 @@
 - [Spring form tutorial](https://www.baeldung.com/spring-mvc-form-tutorial)
 - [Três técnicas de ciclo de vida do Beans no Spring](https://imasters.com.br/back-end/tres-tecnicas-de-ciclo-de-vida-dos-beans-no-spring)
 - [What is a Spring Bean?](https://www.baeldung.com/spring-bean)
-
+- [Error codes with Spring](https://www.logicbig.com/tutorials/spring-framework/spring-core/error-codes.html)
 #### Exemplo de grafo de commits
 
 ```sh
@@ -61,3 +61,6 @@ git log --all --oneline --graph
 Importante sobre startup de um novo projeto: 
 
 > One thing to note here is the name of servlet in <servlet-name> tag in web.xml. Once the DispatcherServlet is initialized, it will looks for a file name [servlet-name]-servlet.xml  in WEB-INF folder of web application. In this example, the framework will look for file called crunchify-servlet.xml.
+
+- [rejectValue from BindingResult](https://docs.spring.io/spring/docs/3.1.x/javadoc-api/org/springframework/validation/Errors.html#rejectValue%28java.lang.String,%20java.lang.String,%20java.lang.String%29)
+- [Adding error message to Spring 3 DataBinder for custom object fields](https://stackoverflow.com/questions/12107503/adding-error-message-to-spring-3-databinder-for-custom-object-fields)
