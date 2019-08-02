@@ -99,3 +99,9 @@ Importante sobre startup de um novo projeto:
 
 - [rejectValue from BindingResult](https://docs.spring.io/spring/docs/3.1.x/javadoc-api/org/springframework/validation/Errors.html#rejectValue%28java.lang.String,%20java.lang.String,%20java.lang.String%29)
 - [Adding error message to Spring 3 DataBinder for custom object fields](https://stackoverflow.com/questions/12107503/adding-error-message-to-spring-3-databinder-for-custom-object-fields)
+
+## Capítulo 3
+
+Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/fllsouto/687e02c67d2b4f9d4f6a60a0bc464ef5).
+
+- [Retain precision with double Java](https://stackoverflow.com/questions/322749/retain-precision-with-double-in-java)
