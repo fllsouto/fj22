@@ -50,7 +50,7 @@ public class DescontoTest {
 		Ingresso ingressoSemDesconto = new Ingresso(this.sessao, new DescontoParaEsturantes());
 		
 		BigDecimal precoEsperado = sessao.getPreco()
-				.multiply(new BigDecimal("0.")).setScale(2, RoundingMode.HALF_UP);
+				.multiply(new BigDecimal("0.5")).setScale(2, RoundingMode.HALF_UP);
 		
 		Assert.assertEquals(precoEsperado, ingressoSemDesconto.getPreco());
 	}

@@ -105,3 +105,9 @@ Importante sobre startup de um novo projeto:
 Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/fllsouto/687e02c67d2b4f9d4f6a60a0bc464ef5).
 
 - [Retain precision with double Java](https://stackoverflow.com/questions/322749/retain-precision-with-double-in-java)
+- [Easiest ways to navigate with eclipse](https://dzone.com/articles/easiest-ways-navigate-methods)
+
+## Capítulo 4
+
+- [Consuming a RESTful Web Service](https://spring.io/guides/gs/consuming-rest/)
+- [RestTemplate Javadoc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)

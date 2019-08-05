@@ -1,7 +1,12 @@
 package br.com.caelum.ingresso.controller;
 
 import br.com.caelum.ingresso.dao.FilmeDao;
+import br.com.caelum.ingresso.dao.SessaoDao;
+import br.com.caelum.ingresso.model.DetalhesDoFilme;
 import br.com.caelum.ingresso.model.Filme;
+import br.com.caelum.ingresso.model.Sessao;
+import br.com.caelum.ingresso.rest.OmdbClient;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -18,58 +25,81 @@ import java.util.Optional;
 @Controller
 public class FilmeController {
 
+	@Autowired
+	private FilmeDao filmeDao;
 
-    @Autowired
-    private FilmeDao filmeDao;
+	@Autowired
+	private SessaoDao sessaoDao;
 
+	@Autowired
+	private OmdbClient client;
 
-    @GetMapping({"/admin/filme", "/admin/filme/{id}"})
-    public ModelAndView form(@PathVariable("id") Optional<Integer> id, Filme filme){
+	@GetMapping("/filme/em-cartaz")
+	public ModelAndView emCartaz() {
+		ModelAndView modelAndView = new ModelAndView("filme/em-cartaz");
 
-        ModelAndView modelAndView = new ModelAndView("filme/filme");
+		modelAndView.addObject("filmes", filmeDao.findAll());
+		return modelAndView;
+	}
 
-        if (id.isPresent()){
-            filme = filmeDao.findOne(id.get());
-        }
+	@GetMapping("/filme/{id}/detalhe")
+	// @PathVariable é diferente de @RequestVariable
+	public ModelAndView detalhes(@PathVariable("id") Integer id) {
+		ModelAndView modelAndView = new ModelAndView("/filme/detalhe");
 
-        modelAndView.addObject("filme", filme);
+		Filme filme = filmeDao.findOne(id);
+		Optional<DetalhesDoFilme> detalhesDoFilme = client.request(filme);
+		List<Sessao> sessoes = sessaoDao.buscaSessoesDoFilme(filme);
 
-        return modelAndView;
-    }
+		modelAndView.addObject("sessoes", sessoes);
+		modelAndView.addObject("detalhes", detalhesDoFilme.orElse(new DetalhesDoFilme()));
+		return modelAndView;
+	}
 
+	@GetMapping({ "/admin/filme", "/admin/filme/{id}" })
+	public ModelAndView form(@PathVariable("id") Optional<Integer> id, Filme filme) {
 
-    @PostMapping("/admin/filme")
-    @Transactional
-    public ModelAndView salva(@Valid Filme filme, BindingResult result){
+		ModelAndView modelAndView = new ModelAndView("filme/filme");
 
-        if (result.hasErrors()) {
-            return form(Optional.ofNullable(filme.getId()), filme);
-        }
+		if (id.isPresent()) {
+			filme = filmeDao.findOne(id.get());
+		}
 
-        filmeDao.save(filme);
+		modelAndView.addObject("filme", filme);
 
-        ModelAndView view = new ModelAndView("redirect:/admin/filmes");
+		return modelAndView;
+	}
 
-        return view;
-    }
+	@PostMapping("/admin/filme")
+	@Transactional
+	public ModelAndView salva(@Valid Filme filme, BindingResult result) {
 
+		if (result.hasErrors()) {
+			return form(Optional.ofNullable(filme.getId()), filme);
+		}
 
-    @GetMapping(value="/admin/filmes")
-    public ModelAndView lista(){
+		filmeDao.save(filme);
 
-        ModelAndView modelAndView = new ModelAndView("filme/lista");
+		ModelAndView view = new ModelAndView("redirect:/admin/filmes");
 
-        modelAndView.addObject("filmes", filmeDao.findAll());
+		return view;
+	}
 
-        return modelAndView;
-    }
+	@GetMapping(value = "/admin/filmes")
+	public ModelAndView lista() {
 
+		ModelAndView modelAndView = new ModelAndView("filme/lista");
 
-    @DeleteMapping("/admin/filme/{id}")
-    @ResponseBody
-    @Transactional
-    public void delete(@PathVariable("id") Integer id){
-        filmeDao.delete(id);
-    }
+		modelAndView.addObject("filmes", filmeDao.findAll());
+
+		return modelAndView;
+	}
+
+	@DeleteMapping("/admin/filme/{id}")
+	@ResponseBody
+	@Transactional
+	public void delete(@PathVariable("id") Integer id) {
+		filmeDao.delete(id);
+	}
 
 }
