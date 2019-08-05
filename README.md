@@ -114,3 +114,5 @@ Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/flls
 - [Java Generics](https://www.tutorialspoint.com/java/java_generics)
 - [Bounded Type Parameters](https://docs.oracle.com/javase/tutorial/java/generics/bounded.html)
 - [Lessons: Generics](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
+- [Interface and Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)
+- [Java Enums](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
