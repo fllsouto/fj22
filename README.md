@@ -119,3 +119,8 @@ Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/flls
 - [Lessons: Generics](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)
 - [Interface and Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)
 - [Java Enums](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+
+## Capítulo 6
+- [Quick Guide to Spring Bean](https://www.baeldung.com/spring-bean-scopes)
+- [Spring MVC - Using session scoped](https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/spring-mvc-session-scope.html)
+- [Spring - Injecting a Prototype Bean into a Singleton Bean Problem](https://www.logicbig.com/tutorials/spring-framework/spring-core/injecting-singleton-with-prototype-bean.html)
