@@ -103,4 +103,10 @@ public class Sessao {
 	public void setIngressos(Set<Ingresso> ingressos) {
 		this.ingressos = ingressos;
 	}
+
+	@Override
+	public String toString() {
+		return "Sessao [id=" + id + ", horario=" + horario + ", sala=" + sala + ", filme=" + filme + ", preco=" + preco
+				+ ", ingressos=" + ingressos + "]";
+	}
 }

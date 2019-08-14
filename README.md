@@ -111,6 +111,9 @@ Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/flls
 
 - [Consuming a RESTful Web Service](https://spring.io/guides/gs/consuming-rest/)
 - [RestTemplate Javadoc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
+
+## Capítulo 5
+
 - [Java Generics](https://www.tutorialspoint.com/java/java_generics)
 - [Bounded Type Parameters](https://docs.oracle.com/javase/tutorial/java/generics/bounded.html)
 - [Lessons: Generics](https://docs.oracle.com/javase/tutorial/extra/generics/index.html)

@@ -83,4 +83,10 @@ public class Ingresso {
 	public void setTipoDeIngresso(TipoDeIngresso tipoDeIngresso) {
 		this.tipoDeIngresso = tipoDeIngresso;
 	}
+
+	@Override
+	public String toString() {
+		return "Ingresso [id=" + id + ", sessao=" + sessao + ", lugar=" + lugar + ", preco=" + preco
+				+ ", tipoDeIngresso=" + tipoDeIngresso + "]";
+	}
 }
