@@ -25,17 +25,13 @@ public class CarrinhoForm {
 	
 	public List<Ingresso> toIngressos(SessaoDao sessaoDao, LugarDao lugarDao) {
 		return this.ingressos.stream().map(ingresso -> {
-			System.out.println("Ingresso: " + ingresso);
 			Sessao sessao = ingresso.getSessao();
-			System.out.println("Sessao antes: " + sessao);
 			sessao = sessaoDao.findOne(sessao.getId());
-			System.out.println("Sessao depois: " + sessao);
+
 			Lugar lugar = ingresso.getLugar();
-			System.out.println("Lugar antes: " + lugar);
 			lugar = lugarDao.findOne(lugar.getId());			
-			System.out.println("Lugar depois: " + lugar);
+			
 			TipoDeIngresso tipoDeIngresso = ingresso.getTipoDeIngresso();
-			System.out.println("------------------------");
 			return new Ingresso(sessao, tipoDeIngresso, lugar);
 		}).collect(Collectors.toList());
 	}

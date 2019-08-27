@@ -124,3 +124,18 @@ Fiz alguns testes usando double e BigDecimal [aqui](https://gist.github.com/flls
 - [Quick Guide to Spring Bean](https://www.baeldung.com/spring-bean-scopes)
 - [Spring MVC - Using session scoped](https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/spring-mvc-session-scope.html)
 - [Spring - Injecting a Prototype Bean into a Singleton Bean Problem](https://www.logicbig.com/tutorials/spring-framework/spring-core/injecting-singleton-with-prototype-bean.html)
+- [Introduction to Spring Converter](https://www.baeldung.com/spring-type-conversions)
+- [Type conversion](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation)
+
+Statement para verificar venda:
+
+```sql
+SELECT 
+    i.*, 
+    c.id AS compra_id 
+FROM Ingresso AS i 
+JOIN Compra_Ingresso AS ci 
+    ON (i.id = ci.ingressos_id) 
+JOIN Compra AS c 
+    ON (ci.Compra_id = c.id);
+```

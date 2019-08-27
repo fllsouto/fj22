@@ -86,7 +86,7 @@ public class Ingresso {
 
 	@Override
 	public String toString() {
-		return "Ingresso [id=" + id + ", sessao=" + sessao + ", lugar=" + lugar + ", preco=" + preco
+		return "Ingresso [id=" + id + ", sessao=" + sessao.getHorario() + ", lugar=" + lugar + ", preco=" + preco
 				+ ", tipoDeIngresso=" + tipoDeIngresso + "]";
 	}
 }
