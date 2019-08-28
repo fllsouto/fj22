@@ -139,3 +139,9 @@ JOIN Compra_Ingresso AS ci
 JOIN Compra AS c 
     ON (ci.Compra_id = c.id);
 ```
+
+
+
+### Capítulo 8 - Apêndice
+
+- [RFC 4122 - A Universally Unique IDentifier (UUID) URN Namespace](https://tools.ietf.org/html/rfc4122)
