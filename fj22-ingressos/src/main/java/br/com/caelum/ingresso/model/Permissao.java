@@ -7,11 +7,14 @@ import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 public class Permissao implements GrantedAuthority {
+	//TODO: Estou adicionando isso
+	public static final Permissao COMPRADOR = new Permissao("COMPRADOR");
+	public static final Permissao ADMIN = new Permissao("ADMIN");
 
 	@Id
 	private String nome;
-	
-	public Permissao(String nome) {
+	//TODO: Estou adicionando isso
+	private Permissao(String nome) {
 		this.nome = nome;
 	}
 	

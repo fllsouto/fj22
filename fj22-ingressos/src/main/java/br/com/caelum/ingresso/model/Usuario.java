@@ -32,9 +32,7 @@ public class Usuario implements UserDetails {
 	public Usuario() {
 	}
 
-	public Usuario(Long id, String email, String password, Set<Permissao> permissoes) {
-		super();
-		this.id = id;
+	public Usuario(String email, String password, Set<Permissao> permissoes) {
 		this.email = email;
 		this.password = password;
 		this.permissoes = permissoes;
