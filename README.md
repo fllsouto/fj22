@@ -145,3 +145,16 @@ JOIN Compra AS c
 ### Capítulo 8 - Apêndice
 
 - [RFC 4122 - A Universally Unique IDentifier (UUID) URN Namespace](https://tools.ietf.org/html/rfc4122)
+
+Para funcionar as permissões eu preciso popular o banco primeiro:
+
+```sql
+#Inserir as Roles
+INSERT INTO Permissao (nome) VALUES ('ADMIN');
+INSERT INTO Permissao (nome) VALUES ('COMPRADOR');
+
+#Verificar se inseriu corretamente
+SELECT * FROM Permissao;
+```
+
+Para testar o envio de emails eu utilizei o ótimo serviço do [mailtrap.io](https://mailtrap.io).

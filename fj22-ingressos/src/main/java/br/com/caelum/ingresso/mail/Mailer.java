@@ -14,7 +14,7 @@ public class Mailer {
 	@Autowired
 	private JavaMailSender sender;
 	
-	private final String from = "Ingresso<cursofj22@gmail.com";
+	private final String from = "Ingressocursofj22@gmail.com";
 	
 	public void send(Email email) {
 		MimeMessage message = sender.createMimeMessage();
