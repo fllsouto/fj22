@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.caelum.ingresso.dao.UsuarioDao;
-import br.com.caelum.ingresso.form.ConfirmacaoLoginForm;
 import br.com.caelum.ingresso.helper.TokenHelper;
 import br.com.caelum.ingresso.mail.EmailNovoUsuario;
 import br.com.caelum.ingresso.mail.Mailer;
 import br.com.caelum.ingresso.model.Token;
 import br.com.caelum.ingresso.model.Usuario;
+import br.com.caelum.ingresso.model.form.ConfirmacaoLoginForm;
 
 @Controller
 public class UsuarioController {

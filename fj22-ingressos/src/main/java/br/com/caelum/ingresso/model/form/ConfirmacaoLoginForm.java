@@ -1,4 +1,4 @@
-package br.com.caelum.ingresso.form;
+package br.com.caelum.ingresso.model.form;
 
 import java.util.HashSet;
 import java.util.Set;
