@@ -1,6 +1,8 @@
 # Aula 1 - Anotações
 
-## 1.2 Controle de versão com Git
+## Git e Github
+
+### Apostila - 1.2 Controle de versão com Git
 
 ```sh
 # Criando uma pasta para testar os comenados dos Git
@@ -169,10 +171,75 @@ Referências sobre git:
 
 - [Pro git book](https://git-scm.com/book/en/v2)
 - [Controlando versões com Git e Github - Casa do código](https://www.casadocodigo.com.br/products/livro-git-github?)
-
-## 1.2 Controle de versão com Git
-
 - [How To Set Up a Private Git Server on a VPS Setup](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-git-server-on-a-vps)
+
+## Maven
+
+### Instalação do Maven
+
+#### Instalação no Linux
+
+1. Acesse a página de [downloads do Maven](https://maven.apache.org/download.cgi)
+2. Baixe a versão tar.gz ou zip
+3. Acesse a pasta do Download e descompacte para uma pasta da sua preferência
+4. Adicione o diretório `apache-maven-3.X.X/bin` a variável de ambiente PATH
+5. Execute o comando `mvn -v` a resposta deve ser parecida com a seguinte
+
+```sh
+Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T15:41:47-03:00)
+Maven home: /home/fsouto/opt/apache-maven-3.6.0
+Java version: 11.0.2, vendor: Oracle Corporation, runtime: /home/fsouto/opt/jdk-11.0.2
+Default locale: pt_BR, platform encoding: UTF-8
+OS name: "linux", version: "5.0.0-27-generic", arch: "amd64", family: "unix"
+```
+
+### Criando um novo projeto com o Maven
+
+Podemos criar um projeto do zero no Maven, para isso basta executar o seguinte comando:
+
+```sh
+mvn archetype:generate \
+	-DgroupId=com.mycompany.app \
+	-DartifactId=my-app \
+	-DarchetypeArtifactId=maven-archetype-quickstart \
+	-DarchetypeVersion=1.4 \
+	-DinteractiveMode=false \
+```
+
+Isso vai gerar um projeto baseada no arquetipo quickstart, quem tem a seguinte estrutura:
+
+```sh
+ $ tree .
+.
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── mycompany
+    │               └── app
+    │                   └── App.java
+    └── test
+        └── java
+            └── com
+                └── mycompany
+                    └── app
+                        └── AppTest.java
+
+11 directories, 3 files
+```
+
+O Baeldung tem uma explicação muito boa de como [gerenciar archetypes aqui](https://www.baeldung.com/maven-archetype).
+
+Aqui está um explicação detalhada do que é um [archetype artifact](https://maven.apache.org/archetype/index.html) e como usar o [plugin archetype](http://maven.apache.org/archetype/maven-archetype-plugin/index.html).
+
+[Aqui tem um tutorial](https://howtodoinjava.com/maven/create-java-project-maven/) comparativo de como fazer a geração dos projetos de forma interativa ou em batch
+
+E aqui temos algumas listas de arquetipos do maven:
+- [Maven Repository Archetype](https://maven-repository.com/archetypes)
+- [Maven Archetype list gist](https://gist.github.com/dotku/bdabf7269a0ca73d2aa27dbfe8783454)
+
+### Apostila - 1.8 Lidando com build e dependências
 
 Podemos visualizar a árvore de dependẽncia do projeto:
 
@@ -329,9 +396,11 @@ Podemos visualizar a árvore de dependẽncia do projeto:
 [INFO] ------------------------------------------------------------------------
 ```
 
-Podemos baixar o hibernate através do site: [hibernate](http://hibernate.org/)
+Podemos baixar o hibernate através do site [hibernate](http://hibernate.org/).
 
 Existem diversas formas de como resolver problemas de dependência, esse artigo detalha de forma didática por que esse problema ocorre: [Solving dependency conflicts in maven](https://dzone.com/articles/solving-dependency-conflicts-in-maven).
+
+[Aqui também tem](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) uma explicação bem extensa sobre os mecanismos de resolução de dependências.
 
 Nosso pom.xml tem a seguinte estrutura:
 
